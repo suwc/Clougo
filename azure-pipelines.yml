@@ -55,10 +55,3 @@ jobs:
 
     - script: npm run-script pkut
       displayName: 'Pack unit tests'
-
-    - task: AzureWebApp@1
-      inputs:
-        azureSubscription: 'DeploymentConnection0'
-        appName: 'Clougo2'
-        package: '$(System.DefaultWorkingDirectory)'
-        deploymentMethod: zipDeploy
